@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+config.ini
+secrets.yaml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Datos (demasiado grandes para el repo — se descargan con elo.py --download)
+data/results.csv
+data/goalscorers.csv
+data/shootouts.csv
+
+# Modelos entrenados (se generan con train.py)
+data/*.pkl
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Variables de entorno
+.env
