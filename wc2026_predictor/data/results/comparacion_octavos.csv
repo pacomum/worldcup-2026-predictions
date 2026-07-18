@@ -1,0 +1,9 @@
+Local,Visitante,Predicho_avanza,Real_avanza,Correcto,Confianza_v4,Resultado_90min,Notas
+France,Paraguay,France,France,True,80.1,Gana Local,
+Canada,Morocco,Morocco,Morocco,True,66.9,Gana Visitante,
+Brazil,Norway,Brazil,Norway,False,63.3,Gana Visitante,SORPRESA TORNERO — Noruega eliminó a Brasil 2-1
+Mexico,England,England,England,True,61.6,Gana Visitante,England remontó 3-2 (México quedó con 10)
+Portugal,Spain,Spain,Spain,True,61.7,Gana Visitante,
+United States,Belgium,Belgium,Belgium,True,69.0,Gana Visitante,
+Argentina,Egypt,Argentina,Argentina,True,85.2,Gana Local,
+Switzerland,Colombia,Colombia,Switzerland,False,58.9,Empate,Penales (0-0 en 120min) — Suiza avanzó 4-3

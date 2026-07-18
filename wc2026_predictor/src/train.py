@@ -57,18 +57,21 @@ FEATS_TXT  = DATA_DIR / "selected_features.txt"
 
 # ── Catálogo de modelos ────────────────────────────────────────────────────────
 def get_model_catalog() -> dict:
+    # Hiperparámetros optimizados en v7 (convergencia definitiva tras 7 rondas del torneo).
+    # El ensemble Logistica + RF + Log_Calibrada es consistentemente el mejor en walk-forward.
+    # Redes neuronales (MLP) fueron probadas en v4 y descartadas: log-loss 3.3-4.1 vs 0.86 de Logística.
     catalog = {
-        "Logistica":     lambda: LogisticRegression(max_iter=2000, C=0.2, solver="lbfgs"),
-        "RF":            lambda: RandomForestClassifier(n_estimators=700, max_depth=8,
+        "Logistica":     lambda: LogisticRegression(max_iter=2000, C=0.18, solver="lbfgs"),
+        "RF":            lambda: RandomForestClassifier(n_estimators=800, max_depth=8,
                                                         min_samples_leaf=10, random_state=42),
         "Log_Calibrada": lambda: CalibratedClassifierCV(
-                                     LogisticRegression(max_iter=2000, C=0.2), cv=3),
+                                     LogisticRegression(max_iter=2000, C=0.18), cv=3),
         "RF_Calibrado":  lambda: CalibratedClassifierCV(
-                                     RandomForestClassifier(n_estimators=500, max_depth=7,
+                                     RandomForestClassifier(n_estimators=600, max_depth=7,
                                                             min_samples_leaf=12, random_state=42), cv=3),
         "GBM_Calibrado": lambda: CalibratedClassifierCV(
                                      GradientBoostingClassifier(n_estimators=300, max_depth=3,
-                                                                learning_rate=0.04, random_state=42), cv=3),
+                                                                learning_rate=0.035, random_state=42), cv=3),
     }
     if HAS_XGB:
         catalog["XGBoost"] = lambda: XGBClassifier(
