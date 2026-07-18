@@ -58,12 +58,25 @@ CONF_STRENGTH: dict[str, float] = {
     "ofc":      0.55,
 }
 
-# Features finales (20 seleccionadas por Permutation Importance en v6)
+# Features finales — 14 variables seleccionadas por Permutation Importance (v7, convergencia definitiva)
+# Tras 7 versiones del modelo, estas 14 variables son estables y consistentes.
+# Variables descartadas en todos los experimentos (importancia ≤0):
+#   draw_a, gd_a, form_a, streak_diff, streak_h, form_h, draw_h, underdog
 SELECTED_FEATURES = [
-    "we_h", "elo_ratio", "elo_diff", "conf_diff", "conf_a", "elo_a",
-    "form_h", "gf_a", "h2h", "underdog", "conf_prod", "streak_h",
-    "streak_diff", "gd_a", "form_diff", "wc_diff", "form_a",
-    "form_h3", "draw_a", "wc_a",
+    "we_h",       # #1 — probabilidad Elo esperada, la más informativa
+    "elo_diff",   # diferencia de Elo
+    "elo_ratio",  # cociente de Elo (captura no-linealidad)
+    "gf_a",       # goles promedio del visitante
+    "conf_diff",  # diferencial de confederación
+    "elo_a",      # Elo absoluto del visitante
+    "wc_a",       # rendimiento histórico visitante en Mundiales
+    "form_diff",  # diferencia de forma reciente (5 partidos)
+    "conf_prod",  # producto de fortalezas de confederación
+    "conf_a",     # confederación del visitante
+    "h2h",        # head-to-head ponderado por recencia
+    "form_h3",    # forma ultrareciente local (últimos 3 partidos)
+    "draw_risk",  # índice compuesto de riesgo de empate
+    "wc_diff",    # diferencial de rendimiento en Mundiales histórico
 ]
 
 

@@ -1,0 +1,17 @@
+Partido,Local,Visitante,Prediccion_v3,Resultado_Real,Correcto,Confianza_%
+South Africa vs Canada,South Africa,Canada,Canada,Canada,True,59.2
+Brazil vs Japan,Brazil,Japan,Brazil,Brazil,True,66.9
+Germany vs Paraguay,Germany,Paraguay,Germany,Paraguay,False,61.9
+Netherlands vs Morocco,Netherlands,Morocco,Netherlands,Morocco,False,57.5
+Ivory Coast vs Norway,Ivory Coast,Norway,Norway,Norway,True,65.7
+France vs Sweden,France,Sweden,France,France,True,82.0
+Mexico vs Ecuador,Mexico,Ecuador,Ecuador,Mexico,False,51.9
+England vs DR Congo,England,DR Congo,England,England,True,82.0
+Belgium vs Senegal,Belgium,Senegal,Belgium,Belgium,True,65.5
+United States vs Bosnia,United States,Bosnia,United States,United States,True,65.3
+Spain vs Austria,Spain,Austria,Spain,Spain,True,78.5
+Portugal vs Croatia,Portugal,Croatia,Portugal,Portugal,True,62.1
+Switzerland vs Algeria,Switzerland,Algeria,Switzerland,Switzerland,True,65.7
+Australia vs Egypt,Australia,Egypt,Australia,Egypt,False,57.1
+Argentina vs Cape Verde,Argentina,Cape Verde,Argentina,Argentina,True,90.6
+Colombia vs Ghana,Colombia,Ghana,Colombia,Colombia,True,87.0

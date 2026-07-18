@@ -1,0 +1,5 @@
+Local,Visitante,Prediccion,Real,Correcto,Confianza,Score,Resultado_90min,Notas
+France,Morocco,France,France,True,67.4,2-0,Gana Local,Mbappé tardó pero dominó: xG 3.38 vs 0.23 — resultado muy justo
+Spain,Belgium,Spain,Spain,True,70.6,2-1,Gana Local,España más dominante: xG 2.08 vs 0.40 — Fabián + Merino sellaron
+Norway,England,England,England,True,59.5,1-2 (TE),Gana Visitante,Doble Bellingham en tiempo extra — partido parejo (xG 1.25 vs 1.85)
+Argentina,Switzerland,Argentina,Argentina,True,72.0,3-1 (TE),Gana Local,1-1 en 90min → golazo Julián Álvarez en TE + Lautaro al 120min
